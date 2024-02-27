@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Class 4 Assignment Empty</title>
+        <style>
+
+            #container > div {
+                width: 200px;
+                height: 100px;
+                background-color: gray;
+            }
+
+
+            #container {
+                display: flex;
+                gap: 10px;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div id="container">
+            <div class="green"></div>
+            <div class="blue"></div>
+            <div class="green"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div id="last_card" class="orange"></div>
+        </div>
+
+        
+        <script>
+
+            // make all cards with the class "green" with a green top border, 5px wide, solid stroke
+
+            let green_cards = document.getElementsByClassName("green");
+
+            for (let index = 0; index < green_cards.length; index++) {
+                green_cards[index].style.borderTop = '5px solid green';
+            }
+
+            // make all cards with the class "red" a bottom border, a width of 3px, and dotted stroke
+
+            let red_cards = document.getElementsByClassName("red");
+
+            for (let index = 0; index < red_cards.length; index++) {
+                red_cards[index].style.borderBottom = '3px dotted red';
+            }
+
+            // for the blue and orange cards, give them background colors (do not add an ID to them -- use the class name)
+
+            let blue_cards = document.getElementsByClassName("blue");
+
+            for (let index = 0; index < blue_cards.length; index++) {
+                blue_cards[index].style.backgroundColor = 'blue';
+            }
+
+            let orange_cards = document.getElementsByClassName("orange");
+
+            for (let index = 0; index < orange_cards.length; index++) {
+                orange_cards[index].style.backgroundColor = 'orange';
+            }
+
+            // for the div with id "last_card", append a h1 tag to it that says "this is the last card"
+
+            let h1 = document.createElement('h1');
+
+            h1.innerHTML = '<h1>This is the last card</h1>';
+
+            last_card.append(h1);
+
+            // for the blue card, append a div with a brown background 
+
+            let browndiv = document.createElement('div');
+
+            browndiv.style.backgroundColor = 'brown';
+            browndiv.style.height = '20px';
+            browndiv.style.width = '100%';
+
+            blue_cards[0].append(browndiv);
+
+            // remove any card with the class "red" from the DOM via javascript
+
+           for (let index = 0; index < red_cards.length; index++) {
+                
+           }
+
+
+        </script>
+
+    </body>
+</html>

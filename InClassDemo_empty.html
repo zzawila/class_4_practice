@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Class 4 dom select</title>
+<style>
+
+    .div_with_class {
+        height: 400px;
+        width: 100px;
+        background-color: red;
+    }
+
+    .card {
+        width: 30%;
+        height: 100px;
+    }
+
+    .lead_card {
+        width: 30%;
+        height: 100px;
+    }
+
+    #container {
+        display: flex;
+        gap: 10px;
+    }
+
+    #blue {
+        background-color: blue;
+    }
+
+    #green {
+        background-color: green;
+    }
+
+    #orange {
+        background-color: gray;
+    }
+
+
+
+</style>
+</head>
+<body>
+
+    <div id="container">
+        <div class="lead_card" id="orange"></div>   
+        <div class="card" id="green"></div>
+        <div class="card" id="blue"></div>    
+    </div>
+
+    
+<script>
+
+// Select the div with an orange ID, make the background orange 
+
+let orange_box = document.getElementById('orange');
+
+orange_box.style.backgroundColor = 'Orange'
+
+// Select the container, add another card with a purple background
+
+let new_card = document.createElement('div');
+
+new_card.style.height = '100px';
+new_card.style.width = '30%';
+new_card.style.backgroundColor = 'Purple';
+
+let container = document.getElementById('container');
+
+container.append(new_card);
+
+// Give all divs with the card class a black border
+
+let cards = document.getElementsByClassName('card');
+
+new_card.classList = 'card';
+
+for (let index = 0; index < cards.length; index++) {
+    cards [index].style.border = '10px solid black';
+}
+
+// Remove the blue card
+
+let blue_box = document.getElementById('blue');
+
+blue_box.remove();
+
+// add the card class name to the new div
+
+// new_card.classList = 'card';
+
+// add paragraph tags to div
+
+let paragraph = document.createElement('p');
+
+paragraph.innerText = 'This is a P tag';
+
+orange_box.append(paragraph);
+
+// add text to a paragraph 
+
+// add html to a div 
+
+let div_element = document.createElement('div');
+
+div_element.innerHTML = '<i>This is italics</i>';
+
+container.append(div_element);
+
+
+
+</script>
+
+</body>
+</html>

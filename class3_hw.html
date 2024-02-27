@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Class 3 Javascript HW</title>
+</head>
+<body>
+
+
+<p>Get the change for the S&P 500 for each day.</p>
+
+<p>Write a loop that goes through the array, calculates a sum of the change, and pushes it to a new array along with the date.</p>
+
+<p>Can just print in the console the array.</p>
+    
+<script>
+
+// Put your javascript code in here
+
+let snp_data = [{"Date":"2/16/24","Close":5005.57},{"Date":"2/15/24","Close":5029.73},{"Date":"2/14/24","Close":5000.62},{"Date":"2/13/24","Close":4953.17},{"Date":"2/12/24","Close":5021.84},{"Date":"2/9/24","Close":5026.61},{"Date":"2/8/24","Close":4997.91},{"Date":"2/7/24","Close":4995.06},{"Date":"2/6/24","Close":4954.23},{"Date":"2/5/24","Close":4942.81}];
+
+let day_change = [];
+
+/* For loop
+
+Go through the length of the array,
+
+minus one because you're not getting the change for the first day
+
+*/
+
+for (let i = 0; i < snp_data.length - 1; i++) {
+    
+    // Calculcate the change by day
+
+    let change = snp_data[i].Close - snp_data[i + 1].Close;   // i is the current day, i+ 1 is the day before
+
+    // Create an object
+    let new_element = {
+        'Date':snp_data[i].Date, // this gets the date value for the element from the snp_data
+        'Change':change // adds the change data you just calculated
+    };
+
+    // push the change to the array
+    day_change.push(new_element);
+
+}
+
+
+console.log(day_change); // prints the value out
+
+
+
+</script>
+
+</body>
+</html>
